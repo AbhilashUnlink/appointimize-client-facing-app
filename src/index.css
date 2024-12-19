@@ -79,3 +79,116 @@ html {
     content: "";
     border-radius: 6px 0px 0px 6px;
 }
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 30px 0 20px;
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* align-items: center; */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo img {
+  max-width: 150px;
+}
+
+.footer-social-media {
+  text-align: left;
+}
+
+.footer-social-media h4 {
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+  font-weight: bold;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s;
+  display: flex;
+  gap: 7px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.social-icons a svg{
+  font-size: 1.5rem;
+}
+.social-icons a span {
+  text-transform: uppercase;
+  font-size: .8rem;
+  letter-spacing: .05rem;
+  font-weight: 500;
+}
+.social-icons a:hover {
+  color: #1da1f2;
+}
+
+.footer-contact {
+  text-align: left;
+}
+
+.footer-contact h4 {
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+  font-weight: bold;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+}
+button.whats-app-floating {
+  position: fixed;
+  right: 23px;
+  bottom: 62px;
+  z-index: 11;
+  background: #23c82a;
+}
+button.whats-app-floating svg {
+  font-size: 1.6rem;
+} 
+
+.checkout-btn{
+  width: calc(100% - 5%);
+  margin: 0 auto;
+}
+
+.business-name {
+  font-family: 'Montserrat', sans-serif; /* Stylish font for logos */
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 2px; /* More spacing for logo effect */
+  text-transform: uppercase;
+  color: #333; /* Dark color for contrast */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+

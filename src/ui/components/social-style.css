@@ -71,7 +71,7 @@
 }
 
 .category-price {
-  font-size: 2rem;
+  /* font-size: 2rem; */
   margin: 10px 0 10px 0;
   color: #fff;
   font-weight: 600;
@@ -113,12 +113,12 @@
 }
 
 .category-name {
-  font-size: 35px;
+  font-size: 30px;
   color: #fff;
   padding: 12px 2px 20px;
   letter-spacing: 0.03rem;
   width: 70%;
-  line-height: 30px;
+  line-height: 35px;
 }
 
 @keyframes pulse {

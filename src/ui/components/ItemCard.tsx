@@ -39,7 +39,7 @@ const ItemCard = ({ item
         <div className="service-item relative bg-white  rounded-lg shadow-lg p-6 mb-6 w-full max-w-md mx-auto transform transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-2xl">
             {/* Title and Price Section */}
             <div className="w-full mb-4">
-                <h3 className="text-2xl font-medium text-gray-900">{item.title}</h3>
+                <h3 className="text-xl font-medium text-gray-900">{item.title}</h3>
                 <div className="flex flex-row w-full justify-between mt-1">
                     <div>
 

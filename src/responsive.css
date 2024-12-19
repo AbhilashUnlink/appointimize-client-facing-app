@@ -6,3 +6,38 @@
     padding: 0px 10px;
   }
 }
+
+
+.category-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  border: 1px solid lightgray;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 12px 18px;
+
+}
+.highlighted-category{
+  background-color: #FE00C9;
+  color: #fff;
+  border: none;
+}
+
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+.search-box{
+  width: 90%;
+  margin: 0 auto;
+}
