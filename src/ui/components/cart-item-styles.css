@@ -127,3 +127,39 @@
   color: #302f2f;
 }
 
+/* Service Icon Placeholder */
+.cart-item div.w-20 {
+  background: linear-gradient(135deg, #e5e7eb, #f3f4f6);
+  color: #9ca3af;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Text Content */
+.cart-item h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.cart-item p {
+  font-size: 1.2rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Delete Button */
+button {
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+button:hover {
+  background: #7236e2;
+  color: #fff;
+  /* transform: scale(1.1); */
+}
+.cart-item-wrap{
+  height: 75vh;
+  display: block;
+  overflow-y: auto;
+}

@@ -14,7 +14,7 @@ import popsound from "../assets/sound/pop.mp3";
 import { CiHeadphones, CiPhone, CiVoicemail } from "react-icons/ci";
 
 
-const Header = ({ contactPhone, contactEmail, contactName }: any) => {
+const Header = ({ contactPhone, contactEmail, contactName,CompanyName }: any) => {
   const { searchText } = useSelector((store: any) => store.products)
   const { cartCount } = useSelector((store: any) => store.cart)
   const dispatch = useDispatch();
@@ -31,15 +31,26 @@ const Header = ({ contactPhone, contactEmail, contactName }: any) => {
       </div>
       <div className="max-w-screen-xl mx-auto h-20 flex items-center justify-between px-4 lg:px-0">
         {/* Logo */}
-        <Link to={"/"}>
-          <span style={{ fontSize: "10px" }}>
+        <Link to={"https://www.appointimize.com/"}>
+          {/* <span style={{ fontSize: "10px" }}>
             Powered By
-          </span>
+          </span> */}
           {/* {
             companyImageUrl ?
               <img className="w-44" src={companyImageUrl} alt={"logo"} />
               : */}
-            <img src={"https://www.appointimize.com/assets/Appointimize-new-logo-BA_jJeCQ.png"} alt="logo" className="w-44" />
+            {/* <img src={"https://www.appointimize.com/assets/Appointimize-new-logo-BA_jJeCQ.png"} alt="logo" className="w-44" /> */}
+            <p className="text-3xl font-exuberant text-purple-700 tracking-wide drop-shadow-md">
+  {CompanyName}
+</p>
+        <span className="text-xs text-gray-400">
+            Powered By Appointimize
+          </span>
+
+
+
+
+
         </Link>
         {/* SearchBar */}
 
@@ -93,15 +104,15 @@ const Header = ({ contactPhone, contactEmail, contactName }: any) => {
           onChange={(e) => dispatch(setSearchText(e.target.value))}
           value={searchText}
           placeholder="Search products..."
-          className="w-full flex-1 rounded-full text-gray-900 text-lg placeholder:text-base placeholder:tracking-wide shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 placeholder:font-normal focus:ring-1 focus:ring-darkText sm:text-sm px-4 py-2"
+          className="search-box rounded-full text-gray-900 text-lg placeholder:text-base placeholder:tracking-wide shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 placeholder:font-normal focus:ring-darkText sm:text-sm px-6 py-2"
         />
         {searchText ? (
           <IoClose
             onClick={() => dispatch(setSearchText(""))}
-            className="absolute top-2.5 right-4 text-xl hover:text-red-500 cursor-pointer duration-200"
+            className="absolute top-2.5 right-12 text-xl hover:text-red-500 cursor-pointer duration-200"
           />
         ) : (
-          <IoSearchOutline className="absolute top-2.5 right-4 text-xl" />
+          <IoSearchOutline className="absolute top-2.5 right-12 text-xl" />
         )}
       </Link>
     </div>

@@ -2,20 +2,24 @@
 import Drawer from '@mui/material/Drawer';
 import CloseIcon from '@mui/icons-material/Close';
 import { useDispatch, useSelector } from "react-redux";
-import { FaCartPlus } from "react-icons/fa";
+import { BsCart2 } from "react-icons/bs";
 import { setDrawer } from '../../lib/slice/cartSlice';
 import { Drawer_Type } from '../constants/drawer-constants';
 import AppointmentComponent from './AppointmentComponent';
 import { useState } from 'react';
 import CartComponent from './CartComponent';
+import "../../ui/components/cart-item-styles.css";
 
 export default function CommonDrawer() {
     const dispatch = useDispatch();
     const { drawer } = useSelector((store: any) => store.cart);
     const title: any = {
-        Cart: <div className='flex gap-2 items-center'>
-            <FaCartPlus />  CART
-        </div>,
+        Cart: (
+            <div className='flex gap-3 items-center text-lg font-semibold text-gray-800'>
+                <BsCart2 size={25} className="text-black-800" />
+                <span className="text-xl text-gray-900">CART</span>
+            </div>
+        ),
         Appointment: "APPOINTMENT"
     }
 

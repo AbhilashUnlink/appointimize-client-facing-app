@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux';
 import useSound from 'use-sound';
 import popsound from "../assets/sound/pop.mp3"
 import { Link } from 'react-router-dom';
+import MobilecategoryView from './MobilecategoryView';
 // import { IoClose, IoSearchOutline } from 'react-icons/io5';
 
 // type Employee = {
@@ -90,9 +91,16 @@ const SalonMainBody = ({ serviceCatalogues }: any) => {
         className='flex justify-start pl-3 md:pl-0 md:justify-center'
       >
         <p className='font-bold text-3xl md:text-4xl lg:text:5xl mt-2 mb-2'>
-          OUR SERVICES
+          CHOOSE A CATEGEORY
         </p>
       </div>
+      
+     
+      <MobilecategoryView 
+      categories={serviceCatalogues} 
+      onClick={handleCategoryClick} 
+      selectedCategoryId={selectedCategoryId}  />
+    
       <div className="flex flex-col md:flex-row">
         {/* Left side: Categories List */}
 
@@ -100,6 +108,7 @@ const SalonMainBody = ({ serviceCatalogues }: any) => {
           <h3 className={`font-extrabold text-2xl font-size-2xl flex items-center justify-start px-2 py-4  gap-3 transition-colors`}>CATEGORIES LIST</h3>
           <hr className='mb-4' />
           <div className="space-y-4">
+
 
             <div
               onClick={() => handleCategoryClick("")}

@@ -4,6 +4,7 @@ import { useState } from "react";
 // import Label from "./Label";
 import { MdPhotoLibrary } from "react-icons/md";
 import Login from "./Login";
+import Loading from "./Loading";
 
 const Registration = () => {
   const [login, setLogin] = useState(true);
@@ -172,7 +173,7 @@ const Registration = () => {
               className={`mt-5 w-full py-2 uppercase text-base font-bold tracking-wide text-gray-300 rounded-md hover:text-white hover:bg-indigo-600 duration-200 ${loading ? "bg-gray-500 hover:bg-gray-500" : "bg-indigo-700"
                 }`}
             >
-              {loading ? "Loading..." : "Send"}
+              {loading ? <Loading/>: "Send"}
             </button>
           </form>
           <p className="text-sm leading-6 text-gray-400 text-center -mt-2 py-10">

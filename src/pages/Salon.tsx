@@ -7,6 +7,7 @@ import Header from "../ui/Header";
 import { BASE_URL } from "../ui/constants/api-urls";
 import { useParams } from "react-router-dom";
 import Footer from "../ui/Footer";
+import Loading from "../ui/Loading";
 // import PromotionCampainSection from "../ui/components/PromotionCampainSection";
 // import NotFound from "./NotFound";
 
@@ -69,7 +70,7 @@ const Salon = () => {
         height: "100vh"
       }}
     >
-      Loading...
+     <Loading />
     </div>;
   }
 
@@ -104,6 +105,7 @@ const Salon = () => {
         contactPhone={contactPhone}
         contactEmail={contactEmail}
         contactName={contactName}
+        CompanyName={CompanyName}
 
       />
       <HomeBanner CompanyName={CompanyName} companyAddress={companyAddress}
@@ -116,6 +118,12 @@ const Salon = () => {
         <SalonMainBody serviceCatalogues={serviceCatalogues} />
       }
       <Footer
+      contactPhone={contactPhone}
+      contactEmail={contactEmail}
+      contactName={contactName}
+      companyAddress={companyAddress}
+      CompanyName={CompanyName}
+      socialMediaLinkRltn={socialMediaLinkRltn}
       // companyImageUrl={companyImageUrl}
 
       />
