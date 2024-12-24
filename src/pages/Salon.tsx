@@ -16,7 +16,6 @@ const Salon = () => {
   const [salonData, setSalonData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 
-  console.log(salonData?.data[0], "salonData");
 
 
   const CompanyName = salonData?.data[0]?.title || "";
@@ -25,6 +24,7 @@ const Salon = () => {
   const contactPhone = salonData?.data[0]?.contactPhone || "N/A";
   // const companyImageUrl = salonData?.data[0]?.companyImageUrl || "N/A";
   const companyAddress = salonData?.data[0]?.companyAddress || "";
+  const companyId = salonData?.data[0]?.id || "";
 
 
 
@@ -112,7 +112,9 @@ const Salon = () => {
         promotionData={promotionData}
       />
 
-      <CommonDrawer />
+      <CommonDrawer
+        companyId={companyId}
+      />
       {
         serviceCatalogues && serviceCatalogues?.length > 0 &&
         <SalonMainBody serviceCatalogues={serviceCatalogues} />

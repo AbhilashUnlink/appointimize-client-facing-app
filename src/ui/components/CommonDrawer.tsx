@@ -9,7 +9,7 @@ import AppointmentComponent from './AppointmentComponent';
 import CartComponent from './CartComponent';
 import "../../ui/components/cart-item-styles.css";
 
-export default function CommonDrawer() {
+export default function CommonDrawer({ companyId }:any) {
     const dispatch = useDispatch();
     const { drawer } = useSelector((store: any) => store.cart);
     const title: any = {
@@ -73,6 +73,7 @@ export default function CommonDrawer() {
                     {
                         drawer.type === Drawer_Type.Appointment &&
                         <AppointmentComponent
+                            companyId={companyId}
                         />
                     }
                 </div>

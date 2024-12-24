@@ -16,13 +16,12 @@ import toast from 'react-hot-toast';
 import 'rsuite/dist/rsuite-no-reset.min.css';
 import useSound from "use-sound";
 import popsound from "../../assets/sound/pop.mp3";
-import { useParams } from 'react-router-dom'
 import { addDays, addMinutes, format } from 'date-fns'
 import { CustomButton } from './appointment-form/CustomButton'
 import { attachTimeToDate, generateAvailableTimes, getNext10Days } from './appointment-form/appointmentHelpers'
 import { BASE_URL } from '../constants/api-urls'
 
-const AppointmentComponent = () => {
+const AppointmentComponent = ({ companyId }:any) => {
     const dispatch = useDispatch();
 
     const [playOn] = useSound(popsound, {
@@ -30,7 +29,6 @@ const AppointmentComponent = () => {
     });
 
     const cart = useSelector((store: any) => store.cart);
-    const { id } = useParams();
 
 
     const [formData, setFormData] = useState<any>({
@@ -90,7 +88,7 @@ const AppointmentComponent = () => {
         const startTime = format(currentStartTime, 'HH:mm:ss')
         const endTime = format(addMinutes(currentStartTime, totalDuration), "HH:mm:ss");
         const payload = {
-            companyId: id,
+            companyId: companyId,
             // clientId: "",
             appmtDate: formattedAppointmentDate,
             status: "pending",
@@ -100,7 +98,7 @@ const AppointmentComponent = () => {
                 mobileNumber: formData?.mobileNumber
             },
             appmtPayload: {
-                companyId: id,
+                companyId: companyId,
                 // "clientId": "",
                 startTime,
                 endTime,
