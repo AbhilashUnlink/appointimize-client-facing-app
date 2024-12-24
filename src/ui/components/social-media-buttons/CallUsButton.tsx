@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // CallUsButton.js
-import React from "react";
+// import React from "react";
 import { Button, Typography, Box } from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
 import PropTypes from "prop-types";
 
-const CallUsButton = ({ phoneNumber }) => {
+const CallUsButton = ({ phoneNumber }:any) => {
   return (
     <Box sx={{ display: "flex", justifyContent: "center", marginTop: 2 }}>
       <Button

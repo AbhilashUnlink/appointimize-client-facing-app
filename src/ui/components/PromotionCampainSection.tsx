@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-const PromotionCampainSection = ({ category, item }: any) => {
+const PromotionCampainSection = ({ category="", item }: any) => {
     return (
         <div
             className={
@@ -22,7 +22,7 @@ const PromotionCampainSection = ({ category, item }: any) => {
                 &#x20b9; {Math.round(item?.netPrice)}/- Only
             </div>
             <div className="category-percentage">
-                {item.discount}%<span>Off</span>
+                {item?.discount}%<span>Off</span>
             </div>
         </div>
     );

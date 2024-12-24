@@ -17,7 +17,7 @@ const ScrollToTopButton: React.FC = () => {
     show && (
       <button
         onClick={scrollToTop}
-        className="fixed bottom-3 right-6  bg-purple-600 text-white p-3 rounded-full shadow-md hover:bg-purple-800"
+        className="fixed bottom-3 right-6  bg-gray-600 text-white p-3 rounded-full shadow-md hover:bg-gray-800"
       >
         <FaArrowUp />
       </button>

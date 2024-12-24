@@ -6,7 +6,6 @@ import { BsCart2 } from "react-icons/bs";
 import { setDrawer } from '../../lib/slice/cartSlice';
 import { Drawer_Type } from '../constants/drawer-constants';
 import AppointmentComponent from './AppointmentComponent';
-import { useState } from 'react';
 import CartComponent from './CartComponent';
 import "../../ui/components/cart-item-styles.css";
 
@@ -32,10 +31,7 @@ export default function CommonDrawer() {
         }))
     }
 
-    const [formData, setFormData] = useState({
-        time: new Date(),
-        date: new Date()
-    })
+  
 
 
 
@@ -70,18 +66,13 @@ export default function CommonDrawer() {
                 </div>
                 <hr />
                 <div>
-
-
                     {
                         drawer.type === Drawer_Type.Cart &&
                         <CartComponent />
                     }
-
                     {
                         drawer.type === Drawer_Type.Appointment &&
                         <AppointmentComponent
-                            formData={formData}
-                            setFormData={setFormData}
                         />
                     }
                 </div>

@@ -69,15 +69,15 @@ html {
 }
 
 .service-item::before {
-    background: linear-gradient(to bottom, #33339C, #ff00cc);
-    position: absolute;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    top: 0;
-    opacity: .6;
-    content: "";
-    border-radius: 6px 0px 0px 6px;
+  background: linear-gradient(to bottom, #33339c, #ff00cc);
+  position: absolute;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  top: 0;
+  opacity: 0.6;
+  content: "";
+  border-radius: 6px 0px 0px 6px;
 }
 .footer {
   background-color: #222;
@@ -107,7 +107,7 @@ html {
 .footer-social-media h4 {
   margin-bottom: 12px;
   text-transform: uppercase;
-  letter-spacing: .05rem;
+  letter-spacing: 0.05rem;
   font-weight: bold;
 }
 
@@ -127,13 +127,13 @@ html {
   justify-content: flex-start;
   align-items: center;
 }
-.social-icons a svg{
+.social-icons a svg {
   font-size: 1.5rem;
 }
 .social-icons a span {
   text-transform: uppercase;
-  font-size: .8rem;
-  letter-spacing: .05rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
   font-weight: 500;
 }
 .social-icons a:hover {
@@ -147,7 +147,7 @@ html {
 .footer-contact h4 {
   margin-bottom: 12px;
   text-transform: uppercase;
-  letter-spacing: .05rem;
+  letter-spacing: 0.05rem;
   font-weight: bold;
 }
 
@@ -172,17 +172,20 @@ button.whats-app-floating {
   z-index: 11;
   background: #23c82a;
 }
+button.whats-app-floating:hover {
+  background: #1cd726;
+}
 button.whats-app-floating svg {
   font-size: 1.6rem;
-} 
+}
 
-.checkout-btn{
+.checkout-btn {
   width: calc(100% - 5%);
   margin: 0 auto;
 }
 
 .business-name {
-  font-family: 'Montserrat', sans-serif; /* Stylish font for logos */
+  font-family: "Montserrat", sans-serif; /* Stylish font for logos */
   font-weight: bold;
   font-size: 2rem;
   letter-spacing: 2px; /* More spacing for logo effect */
@@ -192,3 +195,9 @@ button.whats-app-floating svg {
 }
 
 
+.book-your-seat{
+  /* background: url("./assets/curve.png");
+  height: 70vh;
+  background-size: cover;
+  background-position: center; */
+}

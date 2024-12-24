@@ -8,6 +8,9 @@ import useSound from 'use-sound';
 import popsound from "../assets/sound/pop.mp3"
 import { Link } from 'react-router-dom';
 import MobilecategoryView from './MobilecategoryView';
+// import AppointmentForm from './components/appointment-form/AppointmentForm';
+// import NewAppointmentForm from './components/appointment-form/NewAppointmentForm';
+// import { Button } from '@mui/material';
 // import { IoClose, IoSearchOutline } from 'react-icons/io5';
 
 // type Employee = {
@@ -82,10 +85,30 @@ const SalonMainBody = ({ serviceCatalogues }: any) => {
   // const handleEmployeeSelect = (employee: Employee) => {
   //   setSelectedEmployee(employee);
   // };
+  // const [open, setOpen] = useState(false);
 
+  // const handleOpen = () => setOpen(true);
+  // const handleClose = () => setOpen(false);
+
+  // const [userInfo, setUserInfo] = useState({});
 
   return (
     <>
+      {/* <NewAppointmentForm open={open} onClose={handleClose} /> */}
+      {/* <div className="book-your-seat  mt-8 mb-8 text-center">
+        <Button
+          onClick={handleOpen}
+          sx={{
+            backgroundColor: "#D81B60",
+            color: "#fff",
+            padding: "8px 25px",
+            fontSize: "14px",
+            transition: "background-color 0.3s ease",
+          }}
+        >
+          CLICK TO BOOK YOUR SEAT
+        </Button>
+      </div> */}
 
       <div id="items-div-id"
         className='flex justify-start pl-3 md:pl-0 md:justify-center'
@@ -94,13 +117,13 @@ const SalonMainBody = ({ serviceCatalogues }: any) => {
           CHOOSE A CATEGEORY
         </p>
       </div>
-      
-     
-      <MobilecategoryView 
-      categories={serviceCatalogues} 
-      onClick={handleCategoryClick} 
-      selectedCategoryId={selectedCategoryId}  />
-    
+
+
+      <MobilecategoryView
+        categories={serviceCatalogues}
+        onClick={handleCategoryClick}
+        selectedCategoryId={selectedCategoryId} />
+
       <div className="flex flex-col md:flex-row">
         {/* Left side: Categories List */}
 

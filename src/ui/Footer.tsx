@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // import React from "react";
 import { Link } from "react-router-dom";
 import { CiHeadphones, CiPhone, CiVoicemail, CiLocationOn, CiFacebook, CiInstagram } from "react-icons/ci";
