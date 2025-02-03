@@ -11,8 +11,8 @@ const Footer = ({contactPhone, contactEmail, contactName, companyAddress, Compan
   const region = companyAddress ? companyAddress?.region : "";
   const state = companyAddress ? companyAddress?.state : "";
   const street = companyAddress ? companyAddress?.street : "";
-   const facebook = socialMediaLinkRltn[0].url;
-   const instagram = socialMediaLinkRltn[1].url;
+   const facebook = socialMediaLinkRltn[0]?.url;
+   const instagram = socialMediaLinkRltn[1]?.url;
   return (
     <footer className="footer">
       <div className="footer-container">

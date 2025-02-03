@@ -5,7 +5,7 @@ import CommonDrawer from "../ui/components/CommonDrawer";
 import SalonMainBody from "../ui/SalonMainBody";
 import Header from "../ui/Header";
 import { BASE_URL } from "../ui/constants/api-urls";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Footer from "../ui/Footer";
 import Loading from "../ui/Loading";
 // import PromotionCampainSection from "../ui/components/PromotionCampainSection";
@@ -43,6 +43,8 @@ const Salon = () => {
     || "N/A";
 
 
+  const navigate = useNavigate();
+
   const { id } = useParams();
   useEffect(() => {
     const endpoint =
@@ -50,6 +52,7 @@ const Salon = () => {
     fetch(endpoint)
       .then((response) => {
         if (!response.ok) {
+          navigate("/not-found")
           throw new Error("Network response was not ok");
         }
         return response.json();
@@ -70,7 +73,7 @@ const Salon = () => {
         height: "100vh"
       }}
     >
-     <Loading />
+      <Loading />
     </div>;
   }
 
@@ -120,12 +123,12 @@ const Salon = () => {
         <SalonMainBody serviceCatalogues={serviceCatalogues} />
       }
       <Footer
-      contactPhone={contactPhone}
-      contactEmail={contactEmail}
-      contactName={contactName}
-      companyAddress={companyAddress}
-      CompanyName={CompanyName}
-      socialMediaLinkRltn={socialMediaLinkRltn}
+        contactPhone={contactPhone}
+        contactEmail={contactEmail}
+        contactName={contactName}
+        companyAddress={companyAddress}
+        CompanyName={CompanyName}
+        socialMediaLinkRltn={socialMediaLinkRltn}
       // companyImageUrl={companyImageUrl}
 
       />

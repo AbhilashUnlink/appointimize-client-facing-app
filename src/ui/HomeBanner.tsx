@@ -30,10 +30,10 @@ const HomeBanner = ({ CompanyName, companyAddress, promotionData }: { CompanyNam
       </div>
 
       <div className="w-full mt-5 lg:mt-0 lg:w-1/4 ">
-        <PromotionCampainSection
+        {promotionData?.item?.title && <PromotionCampainSection
           category={promotionData?.category}
           item={promotionData?.item}
-        />
+        />}
       </div>
 
     </Container>

@@ -1,41 +1,41 @@
-import {
-  HiBookOpen,
-  HiBookmarkSquare,
-  HiMiniQueueList,
-  HiRss,
-} from "react-icons/hi2";
-import { LuChevronRight } from "react-icons/lu";
+// import {
+//   HiBookOpen,
+//   HiBookmarkSquare,
+//   HiMiniQueueList,
+//   HiRss,
+// } from "react-icons/hi2";
+// import { LuChevronRight } from "react-icons/lu";
 import { useLocation } from "react-router-dom";
 import Container from "../ui/Container";
-import LinkButton from "../ui/LinkButton";
+// import LinkButton from "../ui/LinkButton";
 // import LinkButton from "../ui/LinkButton";
 
-const links = [
-  {
-    name: "Product",
-    href: "/product",
-    description: "You will find all available products here.",
-    icon: HiBookOpen,
-  },
-  {
-    name: "Shop",
-    href: "/shop",
-    description: "Maximum collections of shopping products.",
-    icon: HiMiniQueueList,
-  },
-  {
-    name: "My Account",
-    href: "/profile",
-    description: "Find your information here.",
-    icon: HiBookmarkSquare,
-  },
-  {
-    name: "Blog",
-    href: "/blog",
-    description: "Read our latest news and articles on shopping.",
-    icon: HiRss,
-  },
-];
+// const links = [
+//   {
+//     name: "Product",
+//     href: "/product",
+//     description: "You will find all available products here.",
+//     icon: HiBookOpen,
+//   },
+//   {
+//     name: "Shop",
+//     href: "/shop",
+//     description: "Maximum collections of shopping products.",
+//     icon: HiMiniQueueList,
+//   },
+//   {
+//     name: "My Account",
+//     href: "/profile",
+//     description: "Find your information here.",
+//     icon: HiBookmarkSquare,
+//   },
+//   {
+//     name: "Blog",
+//     href: "/blog",
+//     description: "Read our latest news and articles on shopping.",
+//     icon: HiRss,
+//   },
+// ];
 const NotFound = () => {
   const { pathname } = useLocation();
   const path = pathname.split("/").filter(Boolean).pop();
@@ -48,7 +48,7 @@ const NotFound = () => {
             <p className="text-4xl font-bold leading-8 text-skyText">404</p>
             <h1 className="mt-2 text-3xl font-bold tracking-tight text-darkText">
               <span className="text-redText underline underline-offset-2 decoration-[1px] capitalize">
-                {path}
+                Page
               </span>{" "}
               does not exist
             </h1>
@@ -56,7 +56,7 @@ const NotFound = () => {
               Sorry, we couldn’t find the {path} page you’re looking for.
             </p>
           </div>
-          <div className="mx-auto mt-6 flow-root max-w-lg">
+          {/* <div className="mx-auto mt-6 flow-root max-w-lg">
             <h2 className="sr-only">Popular pages</h2>
             <ul
               role="list"
@@ -96,7 +96,7 @@ const NotFound = () => {
             <div className="mt-5 flex justify-center">
               <LinkButton showButton={true} link={"/"} />
             </div>
-          </div>
+          </div> */}
         </main>
       </div>
     </Container>

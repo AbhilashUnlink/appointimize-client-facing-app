@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-const PromotionCampainSection = ({ category="", item }: any) => {
+const PromotionCampainSection = ({ category = "", item }: any) => {
     return (
         <div
             className={
@@ -11,18 +11,31 @@ const PromotionCampainSection = ({ category="", item }: any) => {
         >
             <div className="category-heading">{category}</div>
             <div className="category-name text-sm sm:text-base md:text-2xl py-2 leading-loose">
-  {item?.title}
-</div>
+                {item?.title && item?.title}
+            </div>
 
 
             <div className="category-price gross-price">
-                &#x20b9; {Math.round(item?.grossPrice)}/-
+                {
+                    item?.grossPrice && <>
+                        &#x20b9; {Math.round(item?.grossPrice)}/-</>
+                }
+
             </div>
             <div className="category-price text-2xl sm:text-base md:text-3xl">
-                &#x20b9; {Math.round(item?.netPrice)}/- Only
+                {
+                    item?.netPrice &&
+                    <>
+                        &#x20b9; {Math.round(item?.netPrice)}/- Only
+                    </>
+                }
             </div>
             <div className="category-percentage">
-                {item?.discount}%<span>Off</span>
+                {
+                    item?.discount && <>
+                        {item?.discount}%<span>Off</span>
+                    </>
+                }
             </div>
         </div>
     );
